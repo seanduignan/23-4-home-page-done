@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/picnic@6/picnic.min.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <style>
+    main {
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+    table, canvas {
+      width: 99%;
+    }
+    th {
+      cursor: pointer;
+    }
+    h2 {
+      padding-left: 10px;
+    }
+    h1 {
+      padding-left: 10px;
+    }
+    p {
+      padding-left: 10px;
+    }
+
+  </style>
+
+</head>
+<body>
+<table id="stats">
+      <tr>
+        <th onclick="sortTable(0)">Name</th>
+        <th onclick="sortTable(1)">T2G</th>
+        <th onclick="sortTable(2)">ATG</th>
+        <th onclick="sortTable(3)">Prox</th>
+        <th onclick="sortTable(4)">SGP</th>
+        <th onclick="sortTable(5)">SGT</th>
+        <th onclick="sortTable(6)">SCR</th>
+        <th onclick="sortTable(7)">DD</th>
+        <th onclick="sortTable(8)">OFT</th>
+        <th onclick="sortTable(9)">APP</th>
+        <th onclick="sortTable(10)">SS</th>
+        <th onclick="sortTable(11)">GIR</th>
+        <th onclick="sortTable(12)">DA</th>
+      </tr>
+
+      <tr>
+
+    <div>
+{{# each items }}
+            <article class="item">
+                 {{ this.tag }}
+                 {{ this.gender }}
+                 {{ this.sire }}
+                 {{ this.breed }}
+                 {{ this.dob }}
+                 {{ this.due }}
+                 {{ this.pur }}
+                 {{ this.dos }}
+                 {{ this.sal }}
+                 {{ this._id }}
+            </article>
+{{/each}}
+    </div>
+
+</tr>
+</table>
